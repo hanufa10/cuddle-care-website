@@ -67,14 +67,13 @@ header {
     transition: all 0.3s ease-in-out;
   }
   
-  .dropdown-menu li {
-    padding: 10px 20px;
-  }
+  
   
   .dropdown-menu li a {
     color: #333;
     text-decoration: none;
     display: block;
+    padding: 10px 20px;
   }
   
   .dropdown-menu li a:hover {
@@ -88,6 +87,22 @@ header {
     display: block;
   }
   
+  .signup-btn {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  .signup-btn:hover {
+    background-color: #e75480;
+    color: white;
+    border-bottom: none;
+  }
   /* Responsive */
   @media (max-width: 768px) {
     header {
@@ -119,7 +134,9 @@ header {
   
 
   .hero {
+    /* background-color: #ffe8e8; */
     background-color: #ffe8e8;
+    padding: 80px 20px;
     text-align: center;
     padding: 80px 20px;
   }
@@ -128,9 +145,12 @@ header {
     color: #e75480;
     margin-bottom: 20px;
   }
+  .hero h3{
+    color: #ff6f91;
+  }
   .hero p {
     font-size: 1.2rem;
-    color: #555;
+    color:#777;
     max-width: 700px;
     margin: 0 auto 30px;
   }
@@ -245,27 +265,6 @@ header {
     font-size: 1rem;
     color: #e75480;
   }
-
-  /* .services {
-  padding: 40px 20px;
-  background-color: #ffe8e8;
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 28px;
-}
-
-.services h2::after {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 100px;
-  background-color: #e75480;
-  margin: 10px auto;
-  border-radius: 50px;
-}
-
 /* Adjusted from services-grid to enable horizontal scrolling */
 .services-grid {
     display: flex;
@@ -278,6 +277,12 @@ header {
   }
   
   /* Individual card */
+  .services h2, .get-in-touch h2, .mission h2, .team h2{
+    /* color: #e75480; */
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
   .service-card {
     flex: 0 0 auto;
     min-width: 350px;
