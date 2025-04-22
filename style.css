@@ -17,7 +17,18 @@ header {
     top: 0;
     z-index: 999;
   }
-  
+  .logo{
+    display: flex;
+    a{
+      text-decoration: none;
+      color: #e75480;
+      display: flex;
+      vertical-align: middle;
+      img{
+        width: 50px;
+      }
+    }
+  }
   /* Logo */
   .logo h1 {
     font-size: 1.8rem;
