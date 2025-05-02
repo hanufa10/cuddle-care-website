@@ -17,8 +17,11 @@ header {
     top: 0;
     z-index: 999;
   }
+
+  /* Logo */
   .logo{
     display: flex;
+    align-items: center;
     a{
       text-decoration: none;
       color: #e75480;
@@ -29,7 +32,6 @@ header {
       }
     }
   }
-  /* Logo */
   .logo h1 {
     font-size: 1.8rem;
     color: #e75480;
@@ -38,6 +40,18 @@ header {
   }
   
   /* Navigation */
+  nav{
+    transition:0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  #menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+  
   nav ul {
     list-style: none;
     display: flex;
@@ -45,7 +59,6 @@ header {
     margin: 0;
     padding: 0;
   }
-  
   nav ul li a {
     text-decoration: none;
     color: #333;
@@ -54,16 +67,16 @@ header {
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 4px;
   }
-  
-  nav ul li a:hover {
+  nav .navbar li a:hover {
     color: #ff6f91;
     border-bottom: 2px solid #ff6f91;
   }
+
+  /* Responsive Navigation */
   .dropdown {
     position: relative;
     transition: all 0.3s ease-in-out;
   }
-  
   .dropdown-menu {
     display: none;
     position: absolute;
@@ -77,27 +90,21 @@ header {
     min-width: 180px;
     transition: all 0.3s ease-in-out;
   }
-  
-  
-  
   .dropdown-menu li a {
     color: #333;
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-  }
-  
+  } 
   .dropdown-menu li a:hover {
     background-color: #ffdee2;
     color: #e75480;
     border-radius: 6px;
   }
-  
   /* Show dropdown on hover */
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-  
   .signup-btn {
     background-color: #ff6f91;
     color: white;
@@ -114,36 +121,46 @@ header {
     color: white;
     border-bottom: none;
   }
-  /* Responsive */
-  @media (max-width: 768px) {
+  /* Responsive header*/
+  @media (max-width: 830px) {
     header {
-      flex-direction: column;
+      display: flex;
+      flex-direction: column;           /* Logo and menu icon in one row */
+      justify-content: space-between;
       align-items: flex-start;
+      padding: 10px 20px;
     }
   
-    nav ul {
+    #navbar {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease;
+      width: 100%;
       flex-direction: column;
-      gap: 15px;
-      margin-top: 15px;
+      margin-top: 10px;
     }
-  
-    nav ul li a {
-      font-size: 1.1rem;
+    
+    #navbar.active {
+      max-height: 500px; /* Adjust depending on your nav content height */
     }
-  }
-  @media (max-width: 768px) {
-    .nav-list {
-      flex-direction: column;
+    #menu-toggle {
+      display: block;
+      cursor: pointer;
+      margin-top:5px ;
     }
-  
-    .dropdown-menu {
-      position: static;
-      box-shadow: none;
+    #open-icon,
+    #close-icon {
+      font-size: 24px;
+      transition: opacity 0.3s ease;
     }
-  }
 
-  
+    #close-icon {
+      display: none;
+    }
 
+  }
+  
+  
   .hero {
     /* background-color: #ffe8e8; */
     background-color: #ffe8e8;
@@ -177,6 +194,19 @@ header {
   }
   .hero button:hover {
     background-color: #e75480;
+  }
+
+  @media (max-width: 400px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .hero button {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+    }
   }
 
 
@@ -239,43 +269,7 @@ header {
     font-size: 0.9rem;
     color: #4f4e4e;
   }
-  .testimonials {
-    background: #fff0f2;
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin-top: 60px;
-    margin: auto;
-    width: 80%;
-  }
-  .testimonial-list{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .testimonial {
-    margin-bottom: 20px;
-    width: 300px;
-    text-align: center;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  .testimonial:hover {
-    transform: translateY(-5px);
-  }
-  .testimonial p {
-    font-style: italic;
-    font-size: 0.95rem;
-  }
-  .testimonial strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #e75480;
-  }
+
 /* Adjusted from services-grid to enable horizontal scrolling */
 .services-grid {
     display: flex;
@@ -312,11 +306,9 @@ header {
     height: 220px;
     object-fit: cover;
   }
-  
   .service-content {
     padding: 20px;
   }
-  
   .service-content h3 {
     margin-bottom: 10px;
     color: #ff6f91;
@@ -337,27 +329,28 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
-  
-  .service-content button a {
-    text-decoration: none;
-    color: white;
-  }
-  
   .service-content button:hover {
     background-color: #e75480;
   }
   
-  /* Optional scrollbar styling */
+  /*scrollbar styling */
   .services-grid::-webkit-scrollbar {
     height: 8px;
   }
-  
   .services-grid::-webkit-scrollbar-thumb {
     background-color: #e75480;
     border-radius: 10px;
   }
-
+  @media (max-width: 768px) {
+    .service-card{
+      max-width: 50%;
+    }
+    }
 
 
   .how-it-works {
@@ -400,6 +393,43 @@ header {
     line-height: 1.5;
   }
 
+  .testimonials {
+    background: #fff0f2;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin: auto;
+    width: 80%;
+  }
+  .testimonial-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .testimonial {
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .testimonial:hover {
+    transform: translateY(-5px);
+  }
+  .testimonial p {
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  .testimonial strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e75480;
+  }
 
   .get-in-touch{
     margin-left:50px ;
@@ -567,4 +597,10 @@ header {
     font-size: 0.9rem;
     color: #777;
     margin-top: 30px;
+  }
+
+  @media (max-width: 1000px) {
+    footer{
+      border-radius:0;
+    }
   }
