@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Layout</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="styleSignUp.css" />
+  <link rel="stylesheet" href="style.css">
   <!-- Font Awesome (optional if you need icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -12,11 +13,38 @@
 
   <!-- Header -->
   <header>
-    <a href="index.html">
-        <img  src="./images/ChatGPT Image Apr 22, 2025, 02_53_24 PM.png" alt="Logo" class="logo-img" />
-    </a>
-    <button>Care provider</button>
+    <div id="menu-toggle">
+      <i class="fa-solid fa-bars" id="open-icon"></i>
+      <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="./images/ChatGPT Image Apr 22, 2025, 02_53_24 PM.png">
+        <h1> Cuddle Care</h1>
+      </a>
+    </div>
+    
+
+      <nav>
+          <ul id="navbar">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Dashboard</a></li></li>
+              <li><a href="#">About</a></li>
+              <li class="dropdown">
+                  <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Daycare Services</a></li>
+                    <li><a href="#">Babysitting</a></li>
+                    <li><a href="#">Health Checkups</a></li>
+                    <li><a href="#">Psychologist Support</a></li>
+                    <li><a href="#">Learning Programs</a></li>
+                  </ul>
+                </li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
   </header>
+
 
   <!-- Main Content Container -->
   <div class="container">
@@ -28,6 +56,11 @@
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
+        <select name="role" id="role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="parent">Parent/Guardian</option>
+          <option value="child">Care Provider</option>
+        </select>
         <button type="submit">Sign Up</button>
       </form>
       <p>Already have an account? <a href="#">Log in</a></p>
@@ -40,6 +73,46 @@
     </div>
 
   </div>
-
+  <footer style="border-radius: 15px;">
+    <div class="footer-container">
+  
+        <!-- About -->
+        <div class="footer-logo">
+          <h2>Cuddle Care</h2>
+          <p>We connect loving families with trusted childcare providers. Safe, nurturing, and smart — every step of the way.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fa-solid fa-envelope"></i> Email: support@cuddlecare.com</p>
+          <p><i class="fa-solid fa-phone"></i> Phone: +251 912 345 678</p>
+          <p><i class="fa-solid fa-location-dot"></i> Address: Bole, Addis Ababa, Ethiopia</p>
+  
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+        &copy; 2025 Cuddle Care. All rights reserved.
+      </div>
+</footer>
 </body>
 </html>
