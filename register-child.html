@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Child</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <h2>Child Registration</h2>
+  <form action="registration-child.php" method="POST">
+    <label for="child_name">Child's Name:</label><br>
+    <input type="text" name="child_name" required><br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" name="dob" required><br><br>
+
+    <label for="parent_email">Parent Email:</label><br>
+    <input type="email" name="parent_email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label for="type">Registration Type:</label><br>
+    <select name="registration_type" id="type">
+        <option selected disabled>Select service you want</option>
+        <?php
+        // Connect to database
+        $conn = new mysqli("localhost", "root", "", "childcare");
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Fetch provider services
+        $sql = "SELECT DISTINCT service_type FROM providers";
+        $result = $conn->query($sql);
+
+        // Loop through results and display options
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<option value='" . htmlspecialchars($row["service_type"]) . "'>" . htmlspecialchars($row["service_type"]) . "</option>";
+            }
+        } else {
+            echo "<option disabled>No services available</option>";
+        }
+
+        $conn->close();
+        ?>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Register Child">
+  </form>
+</body>
+</html>
