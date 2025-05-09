@@ -2,6 +2,28 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+html, body {
+  overflow-x: hidden;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Set all sections to initially be invisible */
+* {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* Apply this class when the element comes into the viewport */
+.visible {
+  opacity: 1;
 }
 
   /* Header Styling */
@@ -250,7 +272,7 @@ header {
     background: #ffe8e8;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
+    max-width: 250px;
     text-align: center;
   }
   .team-member img {
@@ -268,7 +290,50 @@ header {
     font-size: 0.9rem;
     color: #4f4e4e;
   }
+  @media (max-width: 768px) {
+  .team {
+    gap: 15px;
+    padding: 0 20px;
+  }
 
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+    padding: 18px;
+  }
+
+  .team-member img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-info, .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Phone view (<= 400px) */
+@media (max-width: 400px) {
+  .team {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+  }
+
+  .team-member img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .team-info, .description {
+    font-size: 0.85rem;
+  }
+}
 /* Adjusted from services-grid to enable horizontal scrolling */
 .services-grid {
     display: flex;
@@ -352,45 +417,100 @@ header {
     }
 
 
-  .how-it-works {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
+  .faq-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff6f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d04c4c;
+}
+
+.faq-section details {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-section summary {
+  font-weight: 600;
+  color: #333;
+}
+
+.faq-section details[open] {
+  background-color: #fef2f2;
+  border-color: #ffa4a4;
+}
+
+
+  /* Events Section */
+.events {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Scrolling wrapper */
+.event-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Scrolling content */
+.event-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+  gap: 20px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-  .how-it-works h2 {
-    font-size: 2rem;
-    color: #e75480;
-    text-align: center;
-    margin-bottom: 40px;
+  100% {
+    transform: translateX(-50%);
   }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  .step-box {
-    background-color: #ffe8e8;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-  .step-box:hover {
-    transform: translateY(-5px);
-  }
-  .step-box h3 {
-    color: #ff6f91;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-  }
-  .step-box ul {
-    padding-left: 18px;
-    margin: 0;
-  }
-  .step-box ul li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
+}
+
+.event-photo {
+  min-width: 300px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.event-photo img {
+  max-width:500px;
+  height: 300px;
+  display: block;
+}
+
+.event-photo:hover {
+  transform: scale(1.05);
+}
 
   .testimonials {
     background: #fff0f2;
@@ -429,9 +549,14 @@ header {
     font-size: 1rem;
     color: #e75480;
   }
+  @media (max-width: 768px) {
+    .testimonial {
+      width: 100%;
+    }
+  }
 
   .get-in-touch{
-    margin-left:50px ;
+    margin:0px 50px ;
   }
   .contact-section {
     max-width: 1100px;
@@ -514,7 +639,13 @@ header {
     display: block;
     margin-top: 15px;
   }
+  @media (max-width: 400px) {
+    .get-in-touch{
+      margin: 0;
+      
+    }
 
+  }
   footer {
     border-radius: 15px;
     background-color: #ffe8e8;
@@ -601,7 +732,21 @@ header {
   }
 
   @media (max-width: 1000px) {
+    body{
+      margin: 0;
+      padding: 0;
+    }
     footer{
       border-radius:0;
+      width: 100%;
+
+    }
+    .footer-links{
+      display: none;
+    }
+  }
+  @media screen and(max-width:321px){
+    .footer-logo{
+      display: none;
     }
   }

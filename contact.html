@@ -6,6 +6,19 @@
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    @media (max-width: 400px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      .contact-form {
+        width: 100%;
+      }
+      .contact-info {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,41 +39,38 @@
     <div id="menu-toggle">☰</div>
   </header>
   <!-- Contact Section -->
-  <section class="contact-section">
-    <h2 style="color: black; text-align: center; border-bottom: 5px solid #e75480; padding-bottom: 10px; margin:auto;width:300px; ">Get in Touch</h2>
-    <div class="contact-wrapper" style="margin-top: 20px;">
+  <section class="get-in-touch" id="get-in-touch">
+            <h2>Get in Touch <hr style="height: 5px; background-color: #e75480; border: none; border-radius: 50%; margin: auto; width: 20%; margin-top: 20px;"></h2>
+            <div class="contact-wrapper">
+            
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="send-email.php" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
 
-      <!-- Contact Form -->
-      <form class="contact-form" method="post" action="C:\xampp\htdocs\cuddle-care-website\send-email.php">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
 
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    </form>
+                </div>
 
-        <button type="submit">Send Message</button>
-      </form>
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> support@cuddlecare.com</p>
+                    <p><strong>Phone:</strong> +251 912 345 678</p>
+                    <p><strong>Address:</strong> Bole, Addis Ababa, Ethiopia</p>
+                    <p>We're here to help! Reach out anytime for questions, feedback, or assistance.</p>
+                </div>
 
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h3 style="color: black; text-align: center; border-bottom: 2px solid black; padding-bottom: 10px;">Contact Information</h3>
-        <p><strong>Email:</strong> support@cuddlecare.com</p>
-        <p><strong>Phone:</strong> +251 912 345 678</p>
-        <p><strong>Address:</strong> Bole, Addis Ababa, Ethiopia</p>
-        <p>We're here to help! Reach out anytime for questions, feedback, or assistance.</p>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-      </div>
 
-    </div>
-  </section>
-
+        </section><br>
   <!-- Footer (reuse from landing page) -->
   <footer>
     <div class="footer-container">
@@ -88,6 +98,6 @@
       &copy; 2025 Cuddle Care. All rights reserved.
     </div>
   </footer>
-
+  <script src="app.js"></script>
 </body>
 </html>

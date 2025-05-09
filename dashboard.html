@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 99;
+      font-size: 1.5rem;
+      color: white;
+      background-color: #292929;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    aside {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      padding: 20px;
+      background-color: #292929;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      z-index: 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    aside nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside nav ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      list-style: none;
+      background-color: #7c7c7c;
+      padding: 15px;
+      width: 180px;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    aside nav ul li a,
+    aside nav ul li {
+      color: white;
+      text-decoration: none;
+    }
+
+    aside nav ul li:hover {
+      background-color: #5a5959;
+    }
+
+    .fab {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+
+    main.dashboard {
+      margin-left: 220px;
+      padding: 30px;
+      background-color: #f7f7f7;
+      min-height: 100vh;
+    }
+
+    .welcome h1 {
+      margin-bottom: 5px;
+    }
+
+    .welcome p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background-color: #fff1f3;
+      padding: 20px;
+      border-radius: 10px;
+      color: #b13b5f;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+
+    .child-card {
+      background-color: #ffe8e8;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .recent-activity ul,
+    .notifications p {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      padding-left: 20px;
+    }
+
+    .recent-activity ul li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .add-child {
+      padding: 10px;
+      background-color: #fcd7d7;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 200px;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .add-child:hover {
+      background-color: #fff1f3;
+      color: #b13b5f;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      aside {
+        transform: translateX(-100%);
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+
+      aside.show {
+        transform: translateX(0);
+      }
+
+      main.dashboard {
+        margin-left: 0;
+        margin-top: 80px;
+        padding: 20px;
+      }
+
+      .profile {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger" id="hamburger">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="profile">
+      <img src="./images/profile.webp" alt="Profile Picture" width="100px" style="border-radius: 100%;" />
+      <h1 style="color: white; text-align: center;">Name</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-label="Home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="getStarted.html"><i class="fa-solid fa-plus"></i> Add Child</a></li>
+        <li><i class="fa-solid fa-user"></i> My Children</li>
+        <li><i class="fa-solid fa-bell"></i> Notification</li>
+        <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+      </ul>
+    </nav>
+    <div class="contact-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard">
+    <section class="welcome">
+      <a href="getStarted.html">
+        <button class="add-child"><i class="fa-solid fa-plus"></i> Add Child</button>
+      </a>
+      <h1>Welcome back!</h1>
+      <p>Here's what's happening today.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">👶 Children Registered <strong>5</strong></div>
+      <div class="card">📅 Appointments <strong>2</strong></div>
+      <div class="card">📨 Messages <strong>3</strong></div>
+    </section>
+
+    <section class="child-overview">
+      <h2>👧 My Children</h2>
+      <div class="child-card">
+        <h3>Sara Fatih</h3>
+        <p>Age: 4</p>
+        <p>Center: Little Angels</p>
+        <p>Status: Healthy</p>
+      </div>
+    </section>
+
+    <section class="recent-activity">
+      <h2>📝 Recent Activity</h2>
+      <ul>
+        <li>Booked: Little Angels Daycare – May 10</li>
+        <li>Updated: Sara’s vaccination record</li>
+        <li>Received: Message from Bright Minds Center</li>
+      </ul>
+    </section>
+
+    <section class="notifications">
+      <h2>🔔 Notifications</h2>
+      <p>No new alerts.</p>
+    </section>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+
+    hamburger.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

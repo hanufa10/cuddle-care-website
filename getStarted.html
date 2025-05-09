@@ -1,194 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href = "style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #fff0f3;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .logo{
-            margin-right: 100px;
-        }
-        h1 {
-          margin-top: 50px;
-          color: #d63384;
-          font-size: 32px;
-        }
-    
-        p.subtext {
-          font-size: 18px;
-          color: #555;
-          margin-top: 10px;
-        }
-    
-        .options {
-          display: flex;
-          gap: 40px;
-          justify-content: center;
-          margin: 40px 20px;
-          flex-wrap: wrap;
-        }
-    
-        .card {
-          background-color: #fff;
-          border-radius: 16px;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-          padding: 25px;
-          text-align: center;
-          width: 280px;
-          transition: transform 0.3s ease;
-        }
-    
-        .card:hover {
-          transform: translateY(-5px);
-        }
-    
-        .icon {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 15px;
-        }
-    
-        .card h2 {
-          color: #d63384;
-          font-size: 22px;
-        }
-    
-        .card p {
-          color: #444;
-          font-size: 15px;
-          margin: 15px 0;
-        }
-    
-        .btn {
-          background-color: #ff4d88;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 8px;
-          font-size: 15px;
-          text-decoration: none;
-          display: inline-block;
-          transition: background-color 0.2s ease;
-        }
-    
-        .btn:hover {
-          background-color: #e60073;
-        }
-    
-        footer {
-          margin: 50px 0 20px 0;
-          color: #aaa;
-          font-size: 14px;
-          border-radius: 15px;
-        }
-        
-      </style>
-    
+  <title>Register Child</title>
+  <link rel="stylesheet" href="registration.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div id="menu-toggle">
-          <i class="fa-solid fa-bars" id="open-icon"></i>
-          <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </div>
-        <div class="logo">
-          <a href="index.html">
-            <img src="./images/ChatGPT Image Apr 22, 2025, 02_53_24 PM.png">
-            <h1> Cuddle Care</h1>
-          </a>
-        </div>
-        
-  
-          <nav>
-              <ul id="navbar">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Dashboard</a></li></li>
-                  <li><a href="#">About</a></li>
-                  <li class="dropdown">
-                      <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Daycare Services</a></li>
-                        <li><a href="#">Babysitting</a></li>
-                        <li><a href="#">Health Checkups</a></li>
-                        <li><a href="#">Psychologist Support</a></li>
-                        <li><a href="#">Learning Programs</a></li>
-                      </ul>
-                    </li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a class="signup-btn" href="signup.html">Sign Up</a></li>
-              </ul>
-          </nav>
-      </header>
-  
-    <h1>Get Started With Cuddle Care</h1>
-    <p class="subtext">Choose your role to begin your journey with us</p>
-    <div class="options">
-        <div class="card">
-            <img src="../images/child.webp" alt="Register child" class="icon">
-            <h2>Register a Child</h2>
-            <p>Enroll your little one in safe, fun, and educational care programs with trusted providers.</p>
-            <a href="register-child.html" class="btn">I'm a Parent</a>
-        </div>
-        <div class="card">
-            <img src="../images/provider.png" alt="Register Providers" class="icon">
-            <h2>Register as Provider</h2>
-            <p>Join our platform and offer professional childcare services to loving families near you.</p>
-            <a href="register-provider.html" class="btn">I'm a Care Provider</a>
-        </p>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-container">
-      
-            <!-- About -->
-            <div class="footer-logo">
-              <h2>Cuddle Care</h2>
-              <p>We connect loving families with trusted childcare providers. Safe, nurturing, and smart — every step of the way.</p>
-            </div>
-      
-            <!-- Quick Links -->
-            <div class="footer-links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-      
-            <!-- Contact Info -->
-            <div class="footer-contact">
-              <h3>Contact Us</h3>
-              <p><i class="fa-solid fa-envelope"></i> Email: support@cuddlecare.com</p>
-              <p><i class="fa-solid fa-phone"></i> Phone: +251 912 345 678</p>
-              <p><i class="fa-solid fa-location-dot"></i> Address: Bole, Addis Ababa, Ethiopia</p>
-      
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-      
-          </div>
-      
-          <div class="footer-bottom">
-            &copy; 2025 Cuddle Care. All rights reserved.
-          </div>
-    </footer>
+  <form action="registration-child.php" method="POST" enctype="multipart/form-data">
+  <fieldset>
+    <legend>Child Information</legend>
+
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="DOB">Date of Birth:</label><br>
+    <input type="date" id="DOB" name="DOB" required><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <select id="gender" name="gender" required>
+      <option value="">--Select--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select><br><br>
+
+    <label for="photo">Profile Photo:</label><br>
+    <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Health & Medical Info</legend>
+
+    <label for="allergies">Allergies:</label><br>
+    <input type="text" id="allergies" name="allergies"><br><br>
+
+    <label for="conditions">Chronic Conditions:</label><br>
+    <input type="text" id="conditions" name="conditions"><br><br>
+
+    <label for="medications">Medications:</label><br>
+    <input type="text" id="medications" name="medications"><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Emergency Contact</legend>
+
+    <label for="emergency_name">Emergency Contact Name:</label><br>
+    <input type="text" id="emergency_name" name="emergency_name" required><br><br>
+
+    <label for="emergency_phone">Phone Number:</label><br>
+    <input type="tel" id="emergency_phone" name="emergency_phone" required><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferences</legend>
+
+    <label for="language">Primary Language:</label><br>
+    <input type="text" id="language" name="language"><br><br>
+
+    <label for="meal">Meal Preferences:</label><br>
+    <input type="text" id="meal" name="meal"><br><br>
+
+    <label for="nap_schedule">Nap Schedule:</label><br>
+    <input type="text" id="nap_schedule" name="nap_schedule"><br><br>
+
+    <label for="notes">Special Notes or Instructions:</label><br>
+    <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+  </fieldset>
+
+  <input type="submit" value="Register Child">
+</form>
+
 </body>
 </html>
