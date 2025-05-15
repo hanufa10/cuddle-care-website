@@ -18,27 +18,27 @@ html, body {
 }
   .hero {
  
-    background-color: #ffe8e8;
+    background-color: var(--background-light);
     padding: 80px 20px;
     text-align: center;
     padding: 80px 20px;
   }
   .hero h1 {
     font-size: 2.8rem;
-    color: #e75480;
+    color: var(--primary-color);
     margin-bottom: 20px;
   }
   .hero h3{
-    color: #ff6f91;
+    color: var(--primary-color);
   }
   .hero p {
     font-size: 1.2rem;
-    color:#777;
+    color:var(--text-muted);
     max-width: 700px;
     margin: 0 auto 30px;
   }
   .hero button {
-    background-color: #ff6f91;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -48,7 +48,7 @@ html, body {
     transition: background-color 0.3s ease;
   }
   .hero button:hover {
-    background-color: #e75480;
+    background-color: var(--primary-color);
   }
 
   @media (max-width: 400px) {
@@ -72,7 +72,7 @@ html, body {
     margin: auto;
   }
   .section h2 {
-    color: #e75480;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 15px;
     text-align: center;
@@ -90,7 +90,7 @@ html, body {
   .mission hr{
     height: 5px;
     border: none;
-    background-color: #e75480;
+    background-color: var(--primary-color);
     margin: 20px 500px 20px 500px;
     border-radius: 50%;
   
@@ -103,7 +103,7 @@ html, body {
     margin-top: 40px;
   }
   .team-member {
-    background: #ffe8e8;
+    background: var(--background-light);
     padding: 20px;
     border-radius: 10px;
     max-width: 250px;
@@ -118,11 +118,11 @@ html, body {
   }
   .team-info{
     font-size: 0.95rem;
-    color: #c4829a;
+    color: var(--accent-color);
   }
   .description{
     font-size: 0.9rem;
-    color: #4f4e4e;
+    color: var(--text-secondary);
   }
   @media (max-width: 768px) {
   .team {
@@ -181,7 +181,7 @@ html, body {
   
   /* Individual card */
   .services h2, .get-in-touch h2, .mission h2, .team h2{
-    /* color: #e75480; */
+    /* color: var(--primary-color); */
     font-size: 2rem;
     margin-bottom: 15px;
     text-align: center;
@@ -189,7 +189,7 @@ html, body {
   .service-card {
     flex: 0 0 auto;
     min-width: 350px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -209,17 +209,17 @@ html, body {
   }
   .service-content h3 {
     margin-bottom: 10px;
-    color: #ff6f91;
+    color: var(--primary-color);
   }
   
   .service-content p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--text-light);
     max-width: 700px;
   }
   
   .service-content button {
-    background-color: #ff6f91;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -233,7 +233,7 @@ html, body {
     }
   }
   .service-content button:hover {
-    background-color: #e75480;
+    background-color: var(--primary-color);
   }
   
   /*scrollbar styling */
@@ -241,7 +241,7 @@ html, body {
     height: 8px;
   }
   .services-grid::-webkit-scrollbar-thumb {
-    background-color: #e75480;
+    background-color: var(--primary-color);
     border-radius: 10px;
   }
   @media (max-width: 768px) {
@@ -255,7 +255,7 @@ html, body {
   max-width: 800px;
   margin: 60px auto;
   padding: 20px;
-  background: #fff6f6;
+  background: var(--background-soft);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
@@ -264,11 +264,11 @@ html, body {
 .faq-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #d04c4c;
+  color: var(--danger-color);
 }
 
 .faq-section details {
-  background: #fff;
+  background: var(--white);
   border: 1px solid #ddd;
   border-radius: 8px;
   margin-bottom: 12px;
@@ -279,26 +279,26 @@ html, body {
 
 .faq-section summary {
   font-weight: 600;
-  color: #333;
+  color: var(--heading-color);
 }
 
 .faq-section details[open] {
-  background-color: #fef2f2;
-  border-color: #ffa4a4;
+  background-color: var(--background-light);
+  border-color: var(--accent-color);
 }
 
 
   /* Events Section */
 .events {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
   text-align: center;
 }
 
 .events h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--heading-color);
 }
 
 /* Scrolling wrapper */
@@ -347,7 +347,7 @@ html, body {
 }
 
   .testimonials {
-    background: #fff0f2;
+    background: var(--testimonial-bg);
     padding: 40px 20px;
     border-radius: 10px;
     margin-top: 60px;
@@ -365,7 +365,7 @@ html, body {
     width: 300px;
     text-align: center;
     padding: 20px;
-    background: #fff;
+    background: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
@@ -381,7 +381,7 @@ html, body {
     display: block;
     margin-top: 10px;
     font-size: 1rem;
-    color: #e75480;
+    color: var(--primary-color);
   }
   @media (max-width: 768px) {
     .testimonial {
@@ -400,7 +400,7 @@ html, body {
 
   .contact-section h2 {
     text-align: center;
-    color: #e75480;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 40px;
   }
@@ -412,7 +412,7 @@ html, body {
   }
 
   .contact-form {
-    background-color: #ffe8e8;
+    background-color: var(--background-light);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -443,8 +443,8 @@ html, body {
   .contact-form button {
     margin-top: 20px;
     padding: 12px 25px;
-    background-color: #ff6f91;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -452,7 +452,7 @@ html, body {
   }
 
   .contact-form button:hover {
-    background-color: #e75480;
+    background-color: var(--primary-color);
   }
 
   .contact-info {
@@ -462,7 +462,7 @@ html, body {
 
   .contact-info h3 {
     margin-bottom: 15px;
-    color: #ff6f91;
+    color: var(--primary-color);
   }
 
   .contact-info p {
