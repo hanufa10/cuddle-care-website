@@ -1,0 +1,104 @@
+body {
+      font-family:serif;
+      background:url(../images/babysitting.jpeg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #333;
+      margin: 0;
+      padding: 0;
+
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    
+    h1, h2 {
+      color: #e75480;
+      text-align:center;
+      font-family: "Bodoni Moda", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+    h1{
+      font-size: 2em;
+      color: #c94d73;
+    }
+    h2{
+      max-width:200px;
+      margin:auto;
+      width:50%;
+      border-bottom:5px solid #e75480;
+      border-radius: 50%;
+    }
+    ul {
+      list-style-type: ✅;
+      padding-left: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    ul li{
+      margin-right: 10px;
+      list-style: none;
+      background-color: #eec3d0;
+      padding: 30px;
+      max-width: 300px;
+    }
+    footer{
+      background-color: #afaeae;
+      position: static;
+      margin-top: 100px;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      color: #5a5959;
+      font-size: 12px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn1{
+      background-color: #e75480;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      a{
+        color: #fff;
+      }
+    }
+    .btn1:hover{
+      background-color: #c94d73;
+    }
+    .btn2{
+      background-color: #fff;
+      padding: 10px 20px;
+      border: #e75480 2px solid;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+      a{
+        color: #333;
+      }
+    }
+    .btn2:hover{
+      background-color: #e75480;
+      cursor: pointer;
+      a{
+        color: #fff;
+      }
+    }
