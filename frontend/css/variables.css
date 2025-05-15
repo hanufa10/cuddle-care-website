@@ -2,6 +2,7 @@
   /* Color Palette */
   --primary-color: #e75480;
   --primary-light: #ff6f91;
+  --background-lighter:#ffdee2;
   --background-light: #ffe8e8;
   --hover-bg: #ffdee2;
   --hover-border: #ffa4a4;
@@ -9,9 +10,10 @@
   --text-muted: #777;
   --text-light: #c4829a;
   --accent-light: #fff6f6;
-  --card-bg: #fff;
+  --white: #fff;
   --testimonial-bg: #fff0f2;
   --border-light: #ddd;
+  
 
 
   /* Font */

@@ -1,19 +1,20 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     opacity: 0;
     transition: opacity 1s ease-out;
-  }
+  } */
 
   /* Apply this class when the element comes into the viewport */
-  .visible {
+  /* .visible {
     opacity: 1;
-  }
+  } */
+   @import url(variables.css);
   button {
     padding: 10px 20px;
-    background-color: #e75480;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -23,7 +24,7 @@
   }
   
   button:hover {
-    background-color: #ff6f91;
+    background-color: var(--primary-light);
   }
   
   .container {
@@ -33,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    background-color: #ffdee2;
+    background-color: var(--background-lighter);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -47,7 +48,7 @@
   }
   
   .container-left h1 {
-    color: #e75480;
+    color: var(--primary-color);
     margin-bottom: 20px;
   }
   
@@ -67,12 +68,12 @@
   }
   .container-left p {
     padding: 10px 0;
-    color: #333;
+    color: var(--text-dark);
   }
   
   .container-right {
     flex: 1;
-    background-color: #e75480;
+    background:linear-gradient(to left, var(--primary-color), var(--background-lighter));
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -117,11 +118,16 @@
       padding: 30px;
       width: 100%;
     }
-  
-    .container-left input {
-      width: 100%;
+    .container-right{
+      background:linear-gradient(to top, var(--primary-color), var(--background-lighter))
     }
-  
+    .container-left input ,
+    .container-left button {
+      width: 80%;
+    }
+    .container-right p{
+      width: 50%;
+    }
     header {
       padding: 10px 20px;
       flex-direction: row;

@@ -4,16 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up</title>
-  <link rel="stylesheet" href="styleSignUp.css" />
+  <link rel="stylesheet" href="../css/styleSignUp.css" />
   <link rel="stylesheet" href="style.css">
   <!-- Font Awesome (optional if you need icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <style>
+    .container-right{
+      background:linear-gradient(to right, var(--primary-color), var(--background-lighter))
+    } 
+      @media (max-width: 768px) {
+        .container-right{
+          background:linear-gradient(to bottom, var(--primary-color), var(--background-lighter))
+        }
+      }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
+  <!-- <header>
     <div id="menu-toggle">
       <i class="fa-solid fa-bars" id="open-icon"></i>
       <i class="fa-solid fa-xmark" id="close-icon"></i>
@@ -24,8 +34,6 @@
         <h1> Cuddle Care</h1>
       </a>
     </div>
-    
-
       <nav>
           <ul id="navbar">
               <li><a href="index.html">Home</a></li>
@@ -42,7 +50,7 @@
               <li><a href="#">Contact</a></li>
           </ul>
       </nav>
-  </header>
+  </header> -->
 
 
   <!-- Main Content Container -->
@@ -67,17 +75,17 @@
 
 
   </div>
-  <footer style="border-radius: 15px;">
-    <div class="footer-container">
+  <!-- <footer style="border-radius: 15px;">
+    <div class="footer-container"> -->
   
         <!-- About -->
-        <div class="footer-logo">
+        <!-- <div class="footer-logo">
           <h2>Cuddle Care</h2>
           <p>We connect loving families with trusted childcare providers. Safe, nurturing, and smart — every step of the way.</p>
-        </div>
+        </div> -->
   
         <!-- Quick Links -->
-        <div class="footer-links">
+        <!-- <div class="footer-links">
           <h3>Quick Links</h3>
           <ul>
                 <li><a href="index.html">Home</a></li>
@@ -86,10 +94,10 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
+        </div> -->
   
         <!-- Contact Info -->
-        <div class="footer-contact">
+        <!-- <div class="footer-contact">
           <h3>Contact Us</h3>
           <p><i class="fa-solid fa-envelope"></i> Email: support@cuddlecare.com</p>
           <p><i class="fa-solid fa-phone"></i> Phone: +251 912 345 678</p>
@@ -107,7 +115,7 @@
       <div class="footer-bottom">
         &copy; 2025 Cuddle Care. All rights reserved.
       </div>
-      <script src="app.js"></script>
-</footer>
+    </footer> -->
+    <script src="app.js"></script>
 </body>
 </html>
