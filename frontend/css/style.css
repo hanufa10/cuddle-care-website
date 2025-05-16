@@ -17,83 +17,6 @@ html, body {
     opacity: 1;
   }
 }
-  /* .hero {
-    background-color: var(--background-light);
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .hero h1 {
-    font-size: 2.8rem;
-    color: var(--main-titles);
-    margin-bottom: 20px;
-  }
-  .hero .login-btn{
-    background-color: var(--white);
-    border: 2px solid var(--primary-color);
-  }
-  .hero img{
-    width: 350px;
-    border-radius: 0% 0% 30% 30%;
-  }
-  .hero .login-btn a{
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 400;
-  }
-  .hero .login-btn:hover{
-    background-color: var(--primary-color);
-    cursor: pointer;
-    a{
-      color: var(--white);
-    }
-  }
-  .hero h3{
-    color: var(--primary-color);
-  }
-  .hero p {
-    font-size: 1.2rem;
-    color:var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto 30px;
-  }
-  .hero button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .hero button:hover {
-    background-color: var(--primary-color);
-  }
-
-  @media (max-width: 400px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-    .hero button {
-      padding: 12px 25px;
-      font-size: 0.9rem;
-    }
-  } */
-
-
-
-body {
-  margin: 0;
-  font-family: 'Fredoka', sans-serif;
-  background-color: #fffafc;
-}
-
 .hero {
   display: flex;
   align-items: center;
@@ -102,32 +25,19 @@ body {
   background: linear-gradient(to bottom right, #fffafc, #fce4ec);
   overflow: hidden;
 }
-
-.content {
-  max-width: 50%;
-}
-
-.breadcrumb {
-  font-size: 0.9rem;
-  color: #999;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2.8rem;
-  line-height: 1.2;
+.hero h1{
   color: #333;
+  font-family: 'Fredoka', sans-serif;
+  margin-top: 0; 
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 70px;
 }
 
 .highlight {
-  color: #f94f9e;
+  color: var(--primary-color);
   font-weight: bold;
 }
-
-.btn-group {
-  margin-top: 20px;
-}
-
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -139,30 +49,89 @@ h1 {
 }
 
 .primary {
-  background-color: #f94f9e;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .secondary {
-  border: 2px solid #f94f9e;
-  color: #f94f9e;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   background-color: transparent;
 }
-
-.btn:hover {
-  opacity: 0.85;
+.secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
+.primary:hover {
+  opacity: 0.85;
+}
 .image img {
   max-width: 400px;
   height: auto;
   border-radius: 20px;
 }
+@media (max-width: 768px) {
+      .hero h1{
+        font-size: 3em;
+        line-height: 50px;
+      }  
+      .content,
+      .image {
+        width: 50%;
+      }
+      .image img{
+        max-width: 300px;
+      }
+      .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+@media (max-width: 400px) {
+    .hero{
+      width: 100%;           /* full viewport width */
+      max-width: 100%;        /* no max width limit */
+      padding: 10px 15px;     /* small padding inside container */
+      box-sizing: border-box; /* include padding inside width */
+      display: flex;
+      flex-direction: column;
+      padding-top:30px ;
+    }
+    .hero h1{
+      font-size: 35px;
+      line-height:in;
+      padding: 0px;
+      margin: 0px;
+      margin-bottom: 50px;
+    }
+    .breadcrumb {
+      padding-top:30px ;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .content ,.image {
+      width: 100%;
+    }
+    .btn-group{
+      display: flex;
 
-
-
-
-
+    }
+    .btn {
+      margin-bottom:10px ;
+      width:90px;
+      font-size: 13px;
+      padding: 5px 8px;
+      text-align: center;
+    }
+    .hero {
+      padding: 15px;
+    }
+    .image img{
+      max-width: 180px;
+      margin-top: 50px;
+    }
+  }
 
   .section {
     padding: 60px 20px;
@@ -193,79 +162,7 @@ h1 {
     border-radius: 50%;
   
   }
-  .team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  .team-member {
-    background: var(--background-light);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 250px;
-    text-align: center;
-  }
-  .team-member img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  .team-info{
-    font-size: 0.95rem;
-    color: var(--text-muted);
-  }
-  .description{
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-  }
-  @media (max-width: 768px) {
-  .team {
-    gap: 15px;
-    padding: 0 20px;
-  }
-
-  .team-member {
-    width: 100%;
-    max-width: 300px;
-    padding: 18px;
-  }
-
-  .team-member img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .team-info, .description {
-    font-size: 0.9rem;
-  }
-}
-/* Phone view (<= 400px) */
-@media (max-width: 400px) {
-  .team {
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .team-member {
-    width: 100%;
-    max-width: none;
-    padding: 15px;
-  }
-
-  .team-member img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .team-info, .description {
-    font-size: 0.85rem;
-  }
-}
-
+  
 /* service section styling */
 .services {
   padding: 24px 12px; 
