@@ -167,6 +167,7 @@ html, body {
     font-size: 0.85rem;
   }
 }
+<<<<<<< Updated upstream
 /* Adjusted from services-grid to enable horizontal scrolling */
 .services-grid {
     display: flex;
@@ -248,7 +249,80 @@ html, body {
       max-width: 50%;
     }
     }
+=======
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px;
+}
+>>>>>>> Stashed changes
 
+.member {
+  display: flex;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.member-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.member-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.member-info hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: #555;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #007BFF;
+}
+@media (max-width: 900px) {
+  .team-members{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:600px){
+  .team-members{
+    grid-template-columns: 1fr;
+  }
+}
 
   .faq-section {
   max-width: 800px;
@@ -388,15 +462,22 @@ html, body {
     }
   }
 
-  .get-in-touch{
-    margin:0px 50px ;
-  }
-  .contact-section {
-    max-width: 1100px;
+.contact-wrapper{
+    display: flex;
     margin: auto;
-    padding: 60px 20px;
+    width: 80%;
   }
+.contact-form{
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
 
+<<<<<<< Updated upstream
   .contact-section h2 {
     text-align: center;
     color: #e75480;
@@ -426,14 +507,94 @@ html, body {
 
   .contact-form input,
   .contact-form textarea {
+=======
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  border-bottom:1px solid var(--text-muted) ;
+}
+.contact-form button {
+  align-self: flex-end; /* Aligns button to the right */
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+.contact-info{
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 800px) {
+  .contact-wrapper{
+>>>>>>> Stashed changes
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
+  }  
+}
+@media (max-width: 600px) {
+  .contact-wrapper{
+    flex-direction: column;
+    align-items: center;
   }
+}
+.questions{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+}
+.question{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.questions-list{
+  display: flex;
+  gap: 30px;
+}
+.question-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.question-icon i{
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.question-content{
+  flex: 1;
+  max-width: 450px;
+}
+.question-content h4{
+  margin-bottom: 0px;
+  color:#e75480;
+}
+.question-content p{
+  color: var(--text-dark);
+  margin: 0;
+  margin-bottom: 8px;
+}
+.question-content span a{
+  color:rgb(56, 200, 248);
+  font-weight: 600;
+  text-decoration: none;
 
+<<<<<<< Updated upstream
   .contact-form textarea {
     resize: vertical;
     height: 120px;
@@ -480,3 +641,6 @@ html, body {
 
   }
   
+=======
+}
+>>>>>>> Stashed changes
