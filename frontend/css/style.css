@@ -300,7 +300,6 @@ details summary::before {
 details[open] summary::before {
   content: "➖";           
 }
-
 .inquiry {
   flex: 1;
   min-width: 300px;
@@ -461,7 +460,8 @@ details[open] summary::before {
       width: 100%;
     }
   }
-
+/* contact section */
+/* 
   .get-in-touch{
     margin:0px 50px ;
   }
@@ -550,5 +550,105 @@ details[open] summary::before {
     .get-in-touch{
       margin: 0;
     }
+  } */
+.get-in-touch {
+  padding: 50px 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 45%;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  outline:none ;
+}
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 90%;
+}
+.contact-form input[type="text"],
+.contact-form input[type="tel"] {
+  width: 41%;
+  margin-right: 10px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: var(--primary-light);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0097a7;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 2;
+
+}
+.contact-info h3{
+  margin: 20px 0;
+  font-size: 30px;
+  color: var(--primary-light);
+}
+.contact-info i{
+  margin:0 20px ;
+  color: var(--primary-light);
+
+}
+.contact-info strong {
+  font-size: 18px;
+  margin: 10px 0px;
+  color:#333;
+  margin-left: 0px;
+}
+.vertical-line {
+  width: 1px;
+  background-color: #333;
+  height: auto;
+  align-self: stretch;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .contact-wrapper {
+    flex-direction: column;
   }
-  
+
+  .vertical-line {
+    display: none;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-info {
+    width: 100%;
+  }
+}

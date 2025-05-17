@@ -180,85 +180,6 @@
             </div>
             </div>
         </section> 
-        <!-- <section class="questions">
-          <div class="header">
-            <h1>FAQ?</h1>
-            <h3>Here are some of the Roomsy frequently asked questions.</h3>
-          </div>
-          <div class="question"> 
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-            </div>
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                <div class="question-answer">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-              </div>
-              </div>
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                <div class="question-answer">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-              </div>
-              </div>
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                <div class="question-answer">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-              </div>
-              </div>
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                <div class="question-answer">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-              </div>
-              </div>
-            <div class="questions-list">
-              <div class="question-icon">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <div class="question-content">
-                <div class="question-answer">
-                  <h4>How do I register my child?</h4>
-                  <p>You can register your child by creating an account as a parent/guardian, then filling out the child registration form under your dashboard.</p>
-                  <span><a href="#">Read More</a></span>
-              </div>
-              </div>
-              </div>
-          </div>
-
-        </section> -->
         <section class="events fade-in">
         <h2>Upcoming Events</h2>
         <div class="event-scroll-wrapper">
@@ -303,26 +224,28 @@
             <h3>We are here to help! Reach out.</h3>
           </div>
             <div class="contact-wrapper">
-                <!-- Contact Form -->
                 <div class="contact-form">
                     <form action="send-email.php" method="post">
-                    <input type="text" id="name" name="name" placeholder="Your name" required><br>
-
+                      <div class="input-wrapper">
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                      </div>
+                    <br>
                     <input type="email" id="email" name="email" placeholder="Your email" required><br>
-
                     <textarea id="message" name="message" cols="30" rows="5" placeholder="Write your message..." required></textarea><br>
-
-                    <button type="submit">Send Message</button>
+                      <div class="button-wrapper">
+                        <button type="submit">Send Message</button>
+                      </div>
                     </form>
                 </div>
+                
+                <div class="vertical-line"></div>
 
-                <!-- Contact Info -->
                 <div class="contact-info">
                     <h3>Address: </h3>
-                    <p>Bole, Addis Ababa, Ethiopia</p>
-                    <p><strong>Email:</strong> support@cuddlecare.com</p>
-                    <p><strong>Phone:</strong> +251 912 345 678</p>
-                    <p><strong>Address:</strong> Bole, Addis Ababa, Ethiopia</p>
+                    <p><strong>Email:</strong><br> <i class="fa-solid fa-envelope"></i> support@cuddlecare.com</p>
+                    <p><strong>Phone:</strong><br> <i class="fa-solid fa-phone"></i> +251 912 345 678</p>
+                    <p><strong>Address:</strong><br> <i class="fa-solid fa-location-dot"></i> Addis Bole, Addis Ababa, Ethiopia</p>
                     <q><em><b> We're here to help! Reach out anytime for questions, feedback, or assistance.</b></em></q>
                 </div>
 
