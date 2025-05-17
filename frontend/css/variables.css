@@ -1,0 +1,47 @@
+:root {
+  /* Color Palette */
+  --primary-color: #e75480;
+  --primary-light: #ff6f91;
+  --background-lighter:#ffdee2;
+  --background-light: #ffe8e8;
+  --hover-bg: #ffdee2;
+  --hover-border: #ffa4a4;
+  --text-dark: #333;
+  --text-muted: #777;
+  --text-light: #c4829a;
+  --accent-light: #fff6f6;
+  --white: #fff;
+  --testimonial-bg: #fff0f2;
+  --border-light: #ddd;
+  --background:#fff5f8;
+  --main-titles:#007560;
+  --footer-bg:#b0ab99;
+
+
+
+  /* Font */
+  --font-family-h: 'Fredoka', sans-serif;
+  --font-family-p: "Poppins", sans-serif;
+
+  /* Border Radius */
+  --radius-small: 6px;
+  --radius-medium: 8px;
+  --radius-large: 10px;
+  --radius-xl: 12px;
+
+  /* Spacing */
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --padding-large: 30px;
+
+  /* Box Shadow */
+  --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --box-shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --fade-duration: 1.5s;
+  --scroll-speed: 30s;
+  --highlight-color: #d46c91;
+--dark-background: #3a0519;
+
+}
