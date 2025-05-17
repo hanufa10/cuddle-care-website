@@ -44,4 +44,3 @@ menuIcon.addEventListener('click', () => {
       });
     });
   });
-
