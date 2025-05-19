@@ -1,7 +1,7 @@
 footer {
-    background-color: #ffe8e8;
+    background-color: #3e5576;
+    color:#f1f1f1;
     padding: 20px 40px;
-    margin-top: 24px; 
 }
 
 .footerSection {
@@ -44,11 +44,11 @@ footer {
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    background-color:black;
+   color:black;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffe8e8;
+     background-color:#f1f1f1;
     text-decoration: none;
     transition: all ease-in-out .5s;
  }
@@ -74,7 +74,7 @@ footer {
  }
  ul li a {
     text-decoration: none;
-    color: black;
+     color:#f1f1f1;
     font-size: 16px;
  }
  p{
